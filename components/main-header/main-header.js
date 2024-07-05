@@ -10,7 +10,7 @@ export default function MainHeader() {
     <>
       <MainHeaderBackground />
       <header className={classes.header}>
-        <Link className={classes.logo} href="/next-app/public">
+        <Link className={classes.logo} href="/">
           <Image src={logoImg} alt="A plta with pizza on it" priority />
           NextLevel Food
         </Link>
