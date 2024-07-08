@@ -1,5 +1,5 @@
 import classes from "./meals-details.module.css";
-import { getMeal } from "@/meals";
+import { getMeal } from "@/app/lib/meals";
 import React from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";

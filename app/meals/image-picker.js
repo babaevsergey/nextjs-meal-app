@@ -10,11 +10,9 @@ export default function ImagePicker({ label, name }) {
 
   const handlePickClick = () => {
     imageInputRef.current.click();
-    console.log("imageInputRef", imageInputRef);
   };
 
   const handleImageChange = (event) => {
-    console.log("event", event);
     const file = event.target.files[0];
 
     if (!file) {
@@ -25,7 +23,6 @@ export default function ImagePicker({ label, name }) {
     const fileReader = new FileReader();
 
     fileReader.onload = () => {
-      console.log("fileReader", fileReader);
       setPickedImage(fileReader.result);
     };
 
