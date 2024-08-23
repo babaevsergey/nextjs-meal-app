@@ -4,6 +4,15 @@ import React from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+export async function generateMetadata({ params }) {
+  const meal = await getMeal(params.mealSlug);
+
+  return {
+    title: meal.title,
+    description: meal.description,
+  };
+}
+
 export default function MealsDetailsPage({ params }) {
   const meal = getMeal(params.mealSlug);
 

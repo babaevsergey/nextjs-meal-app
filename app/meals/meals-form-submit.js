@@ -2,7 +2,7 @@
 import { useFormState } from "react-dom";
 
 export default function MealsFormSubmit() {
-  const { pending } = useFormState();
+  const { pending } = useFormState({}, {});
 
   return (
     <button disabled={pending}>
