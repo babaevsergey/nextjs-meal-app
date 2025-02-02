@@ -6,6 +6,7 @@ import MainHeaderBackground from "@/components/main-header/main-header-backgroun
 import NavLink from "@/components/main-header/nav-link";
 
 export default function MainHeader() {
+  console.log("executing");
   return (
     <>
       <MainHeaderBackground />

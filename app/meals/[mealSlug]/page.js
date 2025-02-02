@@ -6,6 +6,11 @@ import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const meal = await getMeal(params.mealSlug);
+  console.log("meal", meal);
+
+  if (!meal) {
+    notFound();
+  }
 
   return {
     title: meal.title,
@@ -15,10 +20,6 @@ export async function generateMetadata({ params }) {
 
 export default function MealsDetailsPage({ params }) {
   const meal = getMeal(params.mealSlug);
-
-  if (!meal) {
-    notFound();
-  }
 
   meal.instructions = meal.instructions.replace(/\n/g, "<br>");
 
